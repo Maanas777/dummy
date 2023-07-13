@@ -1,23 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import { firestore } from './firebase/config';
+import {getDocs,collection,addDoc,setDoc} from 'firebase/firestore'
+
 
 function App() {
+
+ const adddata = async ()=>{
+//collection reference
+const docref=collection(firestore,"products", "m7jZLTneYoHGxCb90FZn")
+
+  const datas = await setDoc(docref,{
+    name:'sdfsdfs'
+  })
+ 
+  
+ 
+
+ }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <button onClick={adddata}> click here</button>
+      
     </div>
   );
 }
