@@ -11,7 +11,7 @@ function App() {
 const docref=collection(firestore,"products", "m7jZLTneYoHGxCb90FZn")
 
   const datas = await setDoc(docref,{
-    name:'sdfsdfs'
+    name:'Samsung'
   })
  
   
